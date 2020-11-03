@@ -3,10 +3,17 @@
  * F-TICKS logger Authentication Processing filter
  *
  * @author Tamas Frank <sitya@niif.hu>
+ * @author Gyula Szabó <gyufi@sztaki.hu>
  * @package simpleSAMLphp
  * @version $Id$
  */
-class sspmod_ftickslogger_Auth_Process_ftickslogger extends SimpleSAML_Auth_ProcessingFilter
+namespace SimpleSAML\Module\attributeaggregator\Auth\Process;
+ 
+use SimpleSAML\Auth\ProcessingFilter;
+use SimpleSAML\Error\Exception;
+use SimpleSAML\Logger;
+
+class ftickslogger extends ProcessingFilter
 {
 
 /**
@@ -71,7 +78,7 @@ class sspmod_ftickslogger_Auth_Process_ftickslogger extends SimpleSAML_Auth_Proc
 			$RP = $state['Destination']['entityid'];
 		}
 
-		SimpleSAML_Logger::stats($this->typeTag . '#TS=' . $TS . '#AP=' . $AP . '#RP=' . $RP . '#PN=' . $PN . '#AM=' . $AM . '#');
+		Logger::stats($this->typeTag . '#TS=' . $TS . '#AP=' . $AP . '#RP=' . $RP . '#PN=' . $PN . '#AM=' . $AM . '#');
 	}
 
 }
