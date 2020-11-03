@@ -7,7 +7,7 @@
  * @package simpleSAMLphp
  * @version $Id$
  */
-namespace SimpleSAML\Module\attributeaggregator\Auth\Process;
+namespace SimpleSAML\Module\ftickslogger\Auth\Process;
  
 use SimpleSAML\Auth\ProcessingFilter;
 use SimpleSAML\Error\Exception;
